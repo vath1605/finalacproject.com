@@ -1,0 +1,574 @@
+@import url('https://fonts.googleapis.com/css2?family=Dangrek&family=Montserrat&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dangrek&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat&family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --main-color: #1b3250;
+    --secondary-color:#122133;
+    --third-color:#091420;
+    --text-color-gold:#b29a3f;
+    --text-color-white:#ffffff;
+    --green-text-color :#018100;
+    --red-text-color: #ff0000;
+    --bg-dark-color: #1a2332;
+    --bg-black-color: #132033;
+    --main-font-family: "Montserrat", sans-serif;
+    --sec-font-family: "Fira Sans", sans-serif;
+    --blue-txt-color: #a9caf0 ;
+    --bg-gray-color : #767776 ;
+}
+body{
+    background-color: var(--third-color);
+}
+header{
+    width: 100%;
+    position: relative;
+}
+#navBar{
+    width: 100%;
+    height: 75px;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: space-around;
+    filter: brightness(100px);
+    box-shadow: 0 0 10px black;
+    position: fixed;
+    top: 0;
+    padding: 0 0 0 70px;
+    z-index: 99;
+}
+#navBar .logo{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+#navBar .logo img{
+    width: 35%;
+    /* margin: 0 100px; */
+}
+#navBar .option{
+    width: 50%;
+    height: 100%;
+    background-color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#navBar .option ul{
+    display: flex;
+    align-items: center;
+}
+#navBar .option ul li{
+    list-style-type: none;
+    margin: 0 10px;
+    font-size: 10px;
+    padding: 15px 10px;
+    cursor: pointer;
+    position: relative;
+}
+#navBar .option ul li img{
+    width: 25px;
+    border-radius: 2px;
+    border: 1px solid var(--text-color-white);
+}
+#navBar .option ul li a{
+    font-family: var(--main-font-family);
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-decoration: none;
+    color: var(--text-color-white);
+}
+#navBar .option ul #li a{
+    color: var(--text-color-gold);
+}
+#navBar .option ul li i{
+    font-size: 13px;
+    color: var(--text-color-white);
+    margin: 0 3px;
+}
+#navBar .option ul #a i{
+    color: var(--text-color-gold);
+}
+#navBar .option ul li #icDrop{
+    transition: all 0.4s;
+}
+#navBar .option ul li:hover .fa-angle-down{
+    transition: all 0.4s;
+    transform: rotate(180deg);
+}
+#navBar .option ul li #a{
+    color: var(--text-color-gold);
+    font-weight: bolder;
+}
+#navBar .option ul li:hover{
+    padding: 15px 10px;
+    background-color: #122133;    
+}
+#navBar .option ul li .dropDown{
+    width: 230px;
+    height: 0px;
+    background-color: var(--bg-black-color);
+    position: absolute;
+    overflow: hidden;
+    top: 100%;
+    right: 0%;
+    transition: all 300ms ease-in-out;
+}
+#navBar .option ul li:hover .dropDown{
+    padding-bottom: 250px;
+    border-top: 2px solid var(--text-color-gold);
+    transition: all 300ms ease-in-out;
+}
+#navBar .option ul li .dropDown table{
+    text-align: end;
+    width: 100%;
+
+}
+#navBar .option ul li .dropDown table tr td{
+    padding: 8px 0;
+}
+#navBar .option ul li .dropDown table tr td hr{
+    margin: 20px 0 0 0;
+    border: 0.5px solid var(--text-color-gold);
+    width: 101%;
+}
+#navBar .option ul li .dropDown table tr td a{
+    margin: 0 10px 0 0;
+    text-transform: capitalize;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: normal;
+    font-family: var(--sec-font-family);
+}
+#navBar .option ul li .dropDown table tr td a:hover{
+    text-decoration: underline;
+    color: var(--text-color-gold);
+}
+#navBar .option ul li .drop1{
+    width: 230px;
+    height: 0px;
+    background-color: var(--bg-black-color);
+    position: absolute;
+    overflow: hidden;
+    top: 100%;
+    right: 0%;
+    transition: all 300ms ease-in-out;
+}
+#navBar .option ul li:hover .drop1{
+    padding-bottom: 70px;
+    border-top: 2px solid var(--text-color-gold);
+    transition: all 300ms ease-in-out;
+}
+#navBar .option ul li .drop1 table{
+    text-align: end;
+    width: 100%;
+
+}
+#navBar .option ul li .drop1 table tr td{
+    padding: 8px 0;
+}
+#navBar .option ul li .drop1 table tr td hr{
+    margin: 20px 0 0 0;
+    border: 0.5px solid var(--text-color-gold);
+    width: 101%;
+}
+#navBar .option ul li .drop1 table tr td a{
+    margin: 0 10px 0 0;
+    text-transform: capitalize;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: normal;
+    font-family: var(--sec-font-family);
+}
+#navBar .option ul li .drop1 table tr td a:hover{
+    text-decoration: underline;
+    color: var(--text-color-gold);
+}
+#secNav{
+    width: 100%;
+    height: 62px;
+    background-color: var(--secondary-color);
+    padding: 0 80px 0 140px;
+    display: flex;
+    margin-top: 75px;
+    justify-content: space-between;
+    position: fixed;    
+    z-index: 98;
+    box-shadow: 0 0 20px #091420;
+}
+#secNav .menu{
+    width: 50%;
+    height: 100%;
+    background-color: rgba(238, 130, 238, 0);
+    display: flex;
+}
+#secNav .menu ul {
+    display: flex;
+    align-items: center;
+
+}
+#secNav .menu ul li{
+    margin-right:40px;
+    list-style-type: none;
+    padding: 20px 0;
+    cursor: pointer;
+    position: relative;
+}
+#secNav .menu ul li .drop2{
+    width: 280px;
+    height: 0;
+    background-color: var(--bg-black-color);
+    position: absolute;
+    top: 103%;
+    left: -2px;
+    overflow: hidden;
+    transition: all 400ms ease-in-out;
+}
+#secNav .menu ul li:hover .drop2{
+    height: 300px;
+    border-top: 1px solid var(--text-color-gold);
+    transition: all 400ms ease-in-out;
+}
+#secNav .menu ul li .drop2 table{
+    text-align: start;
+    width: 100%;
+}
+#secNav .menu ul li .drop2 table tr td{
+    padding: 7px 0 7px 15px;
+}
+#secNav .menu ul li .drop2 table tr td a{
+    font-family: var(--sec-font-family);
+    color: var(--text-color-white);
+    font-weight: normal;
+    font-size: 13px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    transition: all 300ms ease-out;
+}
+#secNav .menu ul li .drop2 table tr td a:hover{
+    color: var(--text-color-gold);
+    text-decoration: underline;
+    transition: all 200ms ease;
+}
+#secNav .menu ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: var(--main-font-family);
+    font-weight: bolder;
+    transition: all 0.4s;
+    color: var(--text-color-white); 
+}
+#secNav .menu ul li i{
+    font-size: 12px;
+    margin: 0 2px;
+    color: var(--text-color-white);
+    transition: all 0.4s ease;
+}
+#secNav .menu ul li:hover a {
+    color: var(--text-color-gold);
+    transition: all 0.4s ease;
+}
+#secNav .menu ul li:hover .fa-angle-down{
+    color: var(--text-color-gold);
+    transform: rotate(180deg);
+    transition: all 0.4s ease;
+}
+#secNav .exChange{
+    width: 23%;
+    height: 100%;
+    margin-right: 70px;
+    display: flex;
+    justify-content: end; 
+    font-family: var(--main-font-family);
+    
+}
+#secNav .exChange ul{
+    display: flex;
+    align-items: center;
+}
+#secNav .exChange ul li{
+    list-style-type: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-left:10px;
+}
+#secNav .exChange ul li img{
+    width: 15px;
+    height: 10px;
+}
+#secNav .exChange ul li a{
+    text-decoration: none;
+    font-weight: 400;
+    color: var(--text-color-white);
+}
+#secNav .exChange ul li #icD{
+    color: var(--red-text-color);
+}
+#secNav .exChange ul li #icU{
+    color: var(--green-text-color);
+    transform: rotate(180deg);
+}
+.main {
+    width: 100%;
+    height: 700vh;
+    background-color: #091420;
+}
+.main #sect1{
+    width: 100%;
+    height: 100vh;
+}
+.main #sect1 .top{
+    width: 100%;
+    height: 80%;
+    background-color: var(--bg-dark-color);
+    display: flex;
+    box-shadow: 0 0 10px black;
+}
+.main #sect1 .top .mid{
+    width: 81.8%;
+    height: 100%;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.slider img{
+    flex: 1 0 100%;
+    aspect-ratio: 130.5/65.7;
+    padding-top: 135px;
+    object-fit: cover;
+    height: 100%;
+}
+.slider{
+    display: flex;
+    height: 100%;
+    aspect-ratio: 130.5/65.7;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+.slider-wraper{     
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 auto;
+}
+.slider-nav{
+    display: flex;
+    column-gap: 0.5rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 75%;
+    z-index: 1;
+}
+#lol{
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: transparent;
+}
+.slider-nav a{
+    width: 0.65rem;
+    height: 0.65rem;
+    border-radius: 50%;
+    background-color: var(--main-color);
+}
+.main #sect1 .top .left{
+    width: 9.2%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.main #sect1 .top .right{
+    width: 9.2%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;   
+}
+.main #sect1 .top .left i{
+    font-size: 20px;
+    padding-top: 137px;
+    color: var(--text-color-white);
+    margin-left: 35px;
+}
+.main #sect1 .top .right i{
+    font-size: 20px;
+    padding-top: 137px;
+    color: var(--text-color-white);
+    margin-right: 35px;
+}
+.main #sect1 .bottom {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-black-color);
+}
+.main #sect1 .bottom table{
+    margin: 0 auto;
+    text-align: center;
+}
+.main #sect1 .bottom table tr td{
+    padding: 5px 45px;
+    background-color: transparent;
+}
+.main #sect1 .bottom table tr td img {
+    width: 45px;
+}
+.main #sect1 .bottom table tr td a{
+    font-family: var(--main-font-family);
+    text-transform: uppercase;
+    color: var(--text-color-white);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 11px;
+}
+.main #sect1 .bottom table tr td:hover a{
+    text-decoration: underline;
+}
+.main #sect1 .bottom table tr td img:hover{
+    cursor: pointer;
+}
+main .main #sect2{
+    width: 100%;
+    height: 70vh;
+    padding: 3% 9.2%;
+    display: flex;
+    justify-content: space-between;
+}
+main .main #sect2 .art{
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+main .main #sect2 .art .pic{
+    width: 100%;
+    height: 85%;
+    padding: 0 30px;
+    display: flex;
+    justify-content: center;
+}
+main .main #sect2 .art .txt{
+    width: 100%;
+    height: 15%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main .main #sect2 .art .txt a{
+    color: var(--blue-txt-color);
+    font-family: var(--sec-font-family);
+    font-size: 15px;
+    text-decoration: none;
+    line-height: 25px;
+}
+main .main #sect2 .art .txt a:hover{
+    color: var(--text-color-white);
+    font-family:var(--sec-font-family);
+    font-size: 15px;
+    line-height: 25px;
+    text-decoration: underline;
+}
+main .main #sect2 .art .pic img{
+    width: 97%;
+    height: 100%;
+    border-radius: 10px;
+}
+main .main #sect3{
+    width: 100%;
+    height: 51.5vh;
+    display: flex;
+}
+main .main #sect3 .card{
+    width: 25%;
+    height: 100%;
+    background-color: var(--bg-gray-color);
+    margin: 0 0.3px;
+}
+main .main #sect3 .card .logo{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .main #sect3 .card .logo img{
+    width: 60%;
+
+}
+main .main #sect3 .card .text{
+    font-family: var(--sec-font-family);
+    color: var(--text-color-white);
+    line-height: 30px;
+    padding: 0 20px;
+}
+main .main #sect3 .card .text span {
+    font-weight: bold;
+}
+main .main footer {
+    width: 100%;
+    height: 58.5vh;
+    background-color: #122133;
+    padding: 6.5vh 0 0 0;
+}
+main .main footer table td a ,p{
+    font-family: var(--sec-font-family);
+    text-transform: uppercase;
+    font-size: 12px;
+    margin: 0 20px;
+    color: var(--text-color-white);
+    text-decoration: none;
+}
+main .main footer table td a:hover{
+    text-decoration: underline;
+}
+main .main footer table td p {
+    text-transform: uppercase;
+}
+main .main footer #tbl1 tr td{
+    padding: 25px 0;
+}
+main .main footer #p{
+    margin: 20px 0 0 0;
+}
+main .main footer #tbl2 tr td img{
+    width: 150px;
+    border-radius: 10px;
+    margin: 15px 0 0 10px;
+}   
+main .main footer #tbl3{
+    text-align: center;
+    margin: 20px 0 0 0;
+}
+main .main footer #tbl3 tr td{
+    padding: 10px 0;
+}
+main .main footer #tbl3 img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    border: 1px solid var(--main-color);
+    object-fit: cover;
+    padding: 1px;
+    transition: all 200ms ease-in-out;
+}
+main .main footer #tbl3 img:hover{
+    border: 1px solid var(--text-color-white);
+    transition: all 200ms ease-in-out;
+}
